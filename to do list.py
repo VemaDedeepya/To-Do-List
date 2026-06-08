@@ -7,20 +7,18 @@ print(tasks)
 
 k = 1
 for tsk in tasks:                   
-       print(k,'.',i)               
+       print(k,'.',tsk)               
        k+=1                         
        
-index = int(input('Enter the number of which task you want to remove: '))
+index = int(input('\nEnter the number of which task you want to remove: '))
 index = index - 1
 if index >= 0 and index < len(tasks):
-    tasks.pop(index)
-    print(tasks)
+    removed_task =  tasks.pop(index)
+    print(f'Removed Task: {removed_task}')
+    print('Updated task list: ',tasks)
 else:
     print('enter correct number')
 
-    '''
-
-'''
 values = input('enter words seperated by space: ')
-s = set(int (x) for x in values.split())
+s = set(values.split())
 print(s)
